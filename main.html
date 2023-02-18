@@ -59,21 +59,18 @@
     }
 	  function addSlide(){
 		  var scrolledImages=document.querySelectorAll('.slide-in');
-		  scrolledImages.forEach((img)=>{
-			  var scrolledHeight=window.scrolly+window.innerHeight-img.height/2;
-			  var imageBottomHeight=i,g.offsetTop + img.height;
+		 scrolledImages.forEach((img)=>{
+			 var scrolledHeight=window.scrolly+window.innerHeight-img.height/2;
+			 var imageBottomHeight=img.offsetTop + img.height;
 			  var isImageHalfScrolled= scrolledHeight > img.offsettop;
-
 			  var isImageFullyScrolled = window.scrolly > imageBottomHeight;
 
-			  if(isImageHalfScrolled && !isImageFullyScrolled){
+			   if(isImageHalfScrolled && !isImageFullyScrolled){
 				  img.classList.add("active");
 			  }else{
 				  img.classList.remove("active");
-			
-			 }
-			  
-	  });
+			}
+			 });
 		  
 	  
 		  }
